@@ -301,6 +301,6 @@ int main(){
 		else
 			temp+=ekspresi[i];
 	}
-	calculate(temp)
+	calculate(temp);
 	return 0;
 }
