@@ -68,3 +68,32 @@ bool isOP(char c){
 		return true;
     return false
 }
+
+int precedence (char c){
+	if(c == '+' || c == '-' ) return 1;
+	if(c == '*' || c == '/' || c == '%' ) return 2;
+	return 0;
+}
+string IntoPos(string in){
+	stack <char> data;
+	
+	string postfix = "";
+	
+	for (i = 0; i < in.length(); i++;){
+		if(in[i] == '-'){
+			if(i == 0){
+				if(isdigit(in[i])){
+					while (i < in.length() && isdigit (in[i])){
+						postfix += in[i];
+						i++;
+					}
+					i--;
+					postfix += " ";
+				}
+				data.pop();
+			} else {
+				postfix += "-1 ";
+				data.push('*');
+		} else {
+			
+	}
