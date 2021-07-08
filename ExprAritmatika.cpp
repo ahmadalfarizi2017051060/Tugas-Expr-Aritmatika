@@ -171,6 +171,9 @@ using namespace std;
 long unsigned int i;
 
 bool isOp(char c){
+	if(c=='+'||c=='-'||c=='*'||c=='/'||c=='%')
+		return true;
+	return false;
 }
 int precedence(char c){
 }
