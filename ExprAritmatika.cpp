@@ -176,6 +176,9 @@ bool isOp(char c){
 	return false;
 }
 int precedence(char c){
+	if(c=='+'||c=='-') return 1;
+	if(c=='*'||c=='/'||c=='%') return 2;
+	return 0;
 }
 double applyOp(double num1, double num2, char op){
 }
