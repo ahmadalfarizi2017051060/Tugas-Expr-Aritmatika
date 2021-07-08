@@ -1,6 +1,6 @@
 //nomor1
 //parsing string infix
-
+/*
 #include<iostream>
 #include<vector>
 #include<ctype.h>
@@ -51,10 +51,10 @@ int main(){
         cout<<j;
     return 0;
 }
-
+*/
 //Nomor 2
 //Infix to Postfix
-
+/*
 #include <iostream>
 #include <ctype.h>
 #include <stack>
@@ -161,3 +161,4 @@ int main(){
 	cout << IntoPos(temp);
 	return 0;
 }
+*/
