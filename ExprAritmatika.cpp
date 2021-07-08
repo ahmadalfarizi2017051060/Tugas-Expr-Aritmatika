@@ -190,14 +190,24 @@ double applyOp(double num1, double num2, char op){
 	return 0;
 }
 void calculate(string input){
+	stack<double> data;
+	stack<char>operasi;
+	
+	for(i=0; i<input.length(); i++){
+		
+	}
+	cout << data.top() << endl;
 }
 
 int main(){
-	
-	
+	string ekspresi; getline(cin, ekspresi);
+	string temp="";
+	for(i=0; i<ekspresi.length(); i++){
+		if(ekspresi[i]==' ')
+			continue;
+		else
+			temp+=ekspresi[i];
+	}
+	calculate(temp)
 	return 0;
 }
-
-
-
-
