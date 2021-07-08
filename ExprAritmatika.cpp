@@ -194,7 +194,17 @@ void calculate(string input){
 	stack<char>operasi;
 	
 	for(i=0; i<input.length(); i++){
-		
+		if(isdigit(input[i])){
+			int value=0;
+			while(i<input.length() && isdigit(input[i])){
+				value = (value*10) + (input[i] - '0');
+				i++;
+			}
+			i--;
+			data.push(value);
+		}
+		else if(input[i] == '(')
+			operasi.push(input[i]);
 	}
 	cout << data.top() << endl;
 }
