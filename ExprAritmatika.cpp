@@ -1,6 +1,6 @@
 //nomor1
 //parsing string infix
-/*
+
 #include<iostream>
 #include<vector>
 #include<ctype.h>
@@ -51,14 +51,13 @@ int main(){
         cout<<j;
     return 0;
 }
-*/
+
 //Nomor 2
 //Infix to Postfix
-/*
+
 #include <iostream>
 #include <ctype.h>
 #include <stack>
-
 using namespace std;
 
 long unsigned int i;
@@ -161,13 +160,15 @@ int main(){
 	cout << IntoPos(temp);
 	return 0;
 }
-*/
+
 //Nomor 3
 //Evaluasi Aritmatika
+
 #include <iostream>
 #include <ctype.h>
 #include <stack>
 using namespace std;
+
 long unsigned int i;
 
 bool isOp(char c){
@@ -295,6 +296,7 @@ void calculate(string input){
 int main(){
 	string ekspresi; getline(cin, ekspresi);
 	string temp="";
+	
 	for(i=0; i<ekspresi.length(); i++){
 		if(ekspresi[i]==' ')
 			continue;
@@ -302,5 +304,6 @@ int main(){
 			temp+=ekspresi[i];
 	}
 	calculate(temp);
+		
 	return 0;
 }
