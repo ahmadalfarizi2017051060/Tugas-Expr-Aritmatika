@@ -7,4 +7,8 @@
 using namespace std;
 
 int main(){
+    string eval; getline(cin,eval);
+    vector<char> data;
+    long unsigned int i;
   
+    for(i=0; i<eval.length(); i++){
