@@ -205,6 +205,24 @@ void calculate(string input){
 		}
 		else if(input[i] == '(')
 			operasi.push(input[i]);
+		else if(input[i] == ')'){
+			while(!operasi.empty() && operasi.top() != '('){
+				if(operasi.top() == '%'){
+					int value2 = data.top(); data.pop();
+                    int value1 = data.top(); data.pop();
+                    operasi.pop();
+                    data.push(value1%value2);
+				} else {
+					double value2 = data.top(); data.pop();
+                    double value1 = data.top(); data.pop();
+                    char op = operasi.top(); operasi.pop();
+                    data.push(applyOp(value1, value2, op));
+				}
+			}
+			if(!operasi.empty())
+				operasi.pop();
+		} else {
+		}
 	}
 	cout << data.top() << endl;
 }
