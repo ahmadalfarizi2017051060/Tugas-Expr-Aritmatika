@@ -162,3 +162,29 @@ int main(){
 	return 0;
 }
 */
+//Nomor 3
+//Evaluasi Aritmatika
+#include <iostream>
+#include <ctype.h>
+#include <stack>
+using namespace std;
+long unsigned int i;
+
+bool isOp(char c){
+}
+int precedence(char c){
+}
+double applyOp(double num1, double num2, char op){
+}
+void calculate(string input){
+}
+
+int main(){
+	
+	
+	return 0;
+}
+
+
+
+
