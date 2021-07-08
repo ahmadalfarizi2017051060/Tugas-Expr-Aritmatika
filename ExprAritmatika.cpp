@@ -32,4 +32,14 @@ int main(){
                     }
                     i--;
                  }else{
-                    data ppush
+                    data.push_back('1');
+                    data.push_back(' ');
+                    data.push_back('*');
+                }
+            } else {
+                if(!isdigit(eval[i-1]) && eval[i+1] != ' '){
+                    data.push_back('1');
+                    data.push_back(' ');
+                    data.push_back('*');
+                } 
+            }
