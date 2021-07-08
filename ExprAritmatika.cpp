@@ -276,6 +276,19 @@ void calculate(string input){
 			}
 		}
 	}
+	while(!operasi.empty()){
+		if(operasi.top() == '%'){
+			int value2 = data.top(); data.pop();
+		    int value1 = data.top(); data.pop();
+		    operasi.pop();
+		    data.push(value1%value2);
+		} else {
+			double value2 = data.top(); data.pop();
+		    double value1 = data.top(); data.pop();
+		    char op = operasi.top(); operasi.pop();
+		    data.push(applyOp(value1, value2, op));
+		}
+	}
 	cout << data.top() << endl;
 }
 
