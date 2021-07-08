@@ -222,6 +222,58 @@ void calculate(string input){
 			if(!operasi.empty())
 				operasi.pop();
 		} else {
+			if(input[i] == '-'){
+				if(i==0){
+					if(isdigit(input[i+1])){
+						i++;
+						int value=0;
+						while(i<input.length() && isdigit(input[i])){
+							value = (value*10) + (input[i] - '0');
+							i++;
+						}
+						i--;
+						data.push(value*-1);
+					} else {
+						data.push(-1);
+						operasi.push('*');
+					}
+				} else {
+					while(!operasi.empty() && precedence(operasi.top()) >= precedence(input[i]) && !isOp(input[i-1])){
+						if(operasi.top() == '%'){
+							int value2 = data.top(); data.pop();
+		                    int value1 = data.top(); data.pop();
+		                    operasi.pop();
+		                    data.push(value1%value2);
+						} else {
+							double value2 = data.top(); data.pop();
+		                    double value1 = data.top(); data.pop();
+		                    char op = operasi.top(); operasi.pop();
+		                    data.push(applyOp(value1, value2, op));
+						}
+					}
+					if((isdigit(input[i+1]) || input[i+1]=='(') && (isdigit(input[i-1]) || input[i-1]==')'))
+						operasi.push(input[i]);
+					else{
+						data.push(-1);
+						operasi.push('*');
+					}
+				} 
+			} else {
+				while(!operasi.empty() && precedence(operasi.top()) >= precedence(input[i])){
+					if(operasi.top() == '%'){
+						int value2 = data.top(); data.pop();
+		                int value1 = data.top(); data.pop();
+		                operasi.pop();
+		                data.push(value1%value2);
+					} else {
+						double value2 = data.top(); data.pop();
+		                double value1 = data.top(); data.pop();
+		                char op = operasi.top(); operasi.pop();
+		                data.push(applyOp(value1, value2, op));
+					}
+				}
+				operasi.push(input[i]);
+			}
 		}
 	}
 	cout << data.top() << endl;
