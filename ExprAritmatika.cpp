@@ -51,3 +51,20 @@ int main(){
         cout<<j;
     return 0;
 }
+
+//Nomor 2
+//Infix to Postfix
+
+#include <iostream>
+#include <ctype.h>
+#include <stack>
+
+using namespace std;
+
+long unsigned int i;
+
+bool isOP(char c){
+    if(c=='+'||c=='-'||c=='*'||c=='/'||c=='%')
+		return true;
+    return false
+}
