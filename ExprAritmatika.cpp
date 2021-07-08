@@ -43,3 +43,11 @@ int main(){
                     data.push_back('*');
                 } 
             }
+        }else
+            data.push_back(eval[i]);
+        data.push_back(' ');
+    }
+    for(auto j:data)
+        cout<<j;
+    return 0;
+}
