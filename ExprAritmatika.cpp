@@ -21,3 +21,15 @@ int main(){
             }
             i--;
         }
+        else if(eval[i] == '-'){
+            data.push_back(eval[i]);
+            if(i==0){
+                if(isdigit(eval[i+1])){
+                    i++;
+                    while(i<eval.length() && isdigit(eval[i])){
+                        data.push_back(eval[i]);
+                        i++;
+                    }
+                    i--;
+                 }else{
+                    data ppush
