@@ -12,3 +12,12 @@ int main(){
     long unsigned int i;
   
     for(i=0; i<eval.length(); i++){
+        if(eval[i] == ' ')
+            continue;
+        else if(isdigit(eval[i])){ 
+            while(i<eval.length() && isdigit(eval[i])){
+                data.push_back(eval[i]);
+                i++;
+            }
+            i--;
+        }
