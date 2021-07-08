@@ -63,10 +63,10 @@ using namespace std;
 
 long unsigned int i;
 
-bool isOP(char c){
+bool isOp(char c){
     if(c=='+'||c=='-'||c=='*'||c=='/'||c=='%')
 		return true;
-    return false
+    return false;
 }
 
 int precedence (char c){
